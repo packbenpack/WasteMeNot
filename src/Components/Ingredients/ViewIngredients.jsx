@@ -3,7 +3,31 @@ import React, {useState} from 'react'
 const ViewIngredients = () => {
 
   return (
-    <div>
+    <div className="ingredientList">
+      <p> Tomatoes </p>
+      <p> Pickles </p>
+      <p> Pears </p>
+      <p> Tomatoes </p>
+      <p> Pickles </p>
+      <p> Pears </p>
+      <p> Tomatoes </p>
+      <p> Pickles </p>
+      <p> Pears </p>
+      <p> Tomatoes </p>
+      <p> Pickles </p>
+      <p> Pears </p>
+      <p> Tomatoes </p>
+      <p> Pickles </p>
+      <p> Pears </p>
+      <p> Tomatoes </p>
+      <p> Pickles </p>
+      <p> Pears </p>
+      <p> Tomatoes </p>
+      <p> Pickles </p>
+      <p> Pears </p>
+      <p> Tomatoes </p>
+      <p> Pickles </p>
+      <p> Pears </p>
       <p> Tomatoes </p>
       <p> Pickles </p>
       <p> Pears </p>

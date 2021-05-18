@@ -24,3 +24,15 @@
   justify-content: left;
   width: 50%
 }
+
+.ingredientList {
+  background-color: lightgray;
+  max-height: 20vh;
+  overflow-y: scroll;
+}
+
+.ingredientList {
+  background-color: lightgray;
+  max-height: 80vh;
+  overflow-y: scroll;
+}

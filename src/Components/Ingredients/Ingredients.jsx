@@ -1,21 +1,29 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import InputIngredients from './InputIngredients.jsx'
 import ViewIngredients from './ViewIngredients.jsx'
 import RecipesList from './RecipesList.jsx'
+import recipeMeta from '../../recipeMeta.json'
 
-const Ingredients = ({ingreds, onChange}) => {
-
+const Ingredients = ({ingreds, onChangeMeta}) => {
+  const [recipes, setRecipes] = useState([])
   const [activeRecipes, setActiveRecipes] = useState(false)
-
+  const generateRecipes = (recipes) => {
+    setRecipes(recipes)
+    console.log(recipes)
+  }
+  useEffect(() => {
+    setActiveRecipes(true)
+  }, [recipes]);
   return (
     <div className="ingredients">
       <h1>Ingredients</h1>
-      <InputIngredients />
+      <InputIngredients ingreds={ingreds} onChangeMeta={onChangeMeta}/>
       <ViewIngredients />
       {activeRecipes
-        ? <RecipesList />
+        ? <RecipesList activeRecipes={recipes} />
         : null
       }
+      <button type="submit" onClick={()=>generateRecipes(recipeMeta)}> Get Recipes </button>
     </div>
   )
 }
