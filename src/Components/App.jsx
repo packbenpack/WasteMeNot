@@ -9,7 +9,7 @@ console.log(window.React1 === window.React2);
 const App = () => {
 
   const [ingredientsPage, setIngredientsPage] = useState(true);
-
+  const [ingredients, setIngredients] = useState([])
   const handleSwap = () => {
     if (ingredientsPage) {
       setIngredientsPage(false)
@@ -17,20 +17,30 @@ const App = () => {
       setIngredientsPage(true)
     }
   }
+  const addIngredients = (ingredientsPage) => {
+    setIngredients(ingredientsPage)
+  }
 
   return (
-
-    <div>
-        <SwapPage
-          swapFunction={handleSwap}
-          currentPage={ingredientsPage}
-        />
+<div>
+  <h1 className = "logo"> WasteMeNot </h1>
+    <div className="wrapper">
+      <hr />
         {ingredientsPage
-        ? <Ingredients />
-        : <Recipes />
+          ? <Ingredients ingreds={ingredients} onChange={addIngredients}/>
+          : <Recipes ingreds={ingredients}/>
         }
+      <hr />
+        <div className="swapPage">
+          <SwapPage
+            swapFunction={handleSwap}
+            currentPage={ingredientsPage}
+          />
+        </div>
+      </div>
     </div>
   )
 }
 
 export default App;
+

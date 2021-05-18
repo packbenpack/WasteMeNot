@@ -1,0 +1,26 @@
+#root {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: lightskyblue;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between
+}
+
+.logo {
+  width: 100%;
+  background-color: grey;
+  font-weight: 700;
+}
+
+.swapPage {
+  justify-content: right;
+}
+
+.ingredients {
+  justify-content: left;
+  width: 50%
+}
