@@ -3,6 +3,7 @@ import axios from 'axios'
 
 const IndividualRecipe = ({title, missingIngredients, unused, id}) => {
   const [saveRecipes, setSaveRecipes] = useState('')
+  const [recipeHasBeenSaved, setRecipeHasBeenSaved] = useState(false)
 
   const cleanText = (str) => {
     let strippedString = str.replace(/(<([^>]+)>)/gi, "");
@@ -30,6 +31,7 @@ const IndividualRecipe = ({title, missingIngredients, unused, id}) => {
     try {
     await axios.post('http://localhost:3000/recipes/addRecipe', recipeShape)
     console.log('success')
+    setRecipeHasBeenSaved(true)
     } catch (err) {
       console.log(err)
     }
@@ -38,12 +40,12 @@ const IndividualRecipe = ({title, missingIngredients, unused, id}) => {
   const getRecipe = async (recipeId) => {
     const res = await axios.get(`https://api.spoonacular.com/recipes/${recipeId}/information?&apiKey=0951c3300ae944fc82b5e5c6ca06133c`)
     setSaveRecipes(res.data);
+    getExtendedRecipe(res.data)
   }
 
   return (
     <div className="recipeFlat">
       <h3>{title}</h3>
-
       <p>Missing Ingredients:</p>
       {unused.map((ingredients) =>
         <li
@@ -51,8 +53,10 @@ const IndividualRecipe = ({title, missingIngredients, unused, id}) => {
           {ingredients.name}
         </li>
       )}
-      <button type='Submit' onClick={()=> getRecipe(id)}> Save Recipe </button>
-      <button type='Submit' onClick={()=> getExtendedRecipe(saveRecipes)}> Test Recipe </button>
+      { recipeHasBeenSaved
+      ? <button type='Submit' className="savedRecipe" onClick={()=> getRecipe(id)}> Recipe Saved </button>
+      : <button type='Submit' className="saveRecipe" onClick={()=> getRecipe(id)}> Save Recipe </button>
+      }
     </div>
   )
 }
