@@ -21,18 +21,23 @@
 }
 
 .ingredients {
+  flex-direction: column;
   justify-content: left;
   width: 50%
 }
 
 .ingredientList {
   background-color: lightgray;
-  max-height: 20vh;
+  max-height: 30vh;
+  width: 60%;
   overflow-y: scroll;
+  border: 1px, solid, black;
 }
 
-.ingredientList {
+.recipeBox {
+  justify-content: right;
   background-color: lightgray;
   max-height: 80vh;
   overflow-y: scroll;
+  border: 1px, solid, black;
 }

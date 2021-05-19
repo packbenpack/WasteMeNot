@@ -6,14 +6,14 @@ import recipeMeta from '../../recipeMeta.json'
 
 const Ingredients = ({ingreds, onChangeMeta}) => {
   const [recipes, setRecipes] = useState([])
-  const [activeRecipes, setActiveRecipes] = useState(false)
-  const generateRecipes = (recipes) => {
-    setRecipes(recipes)
+  const [activeRecipes, setActiveRecipes] = useState(true)
+
+  const generateRecipes = async (recipes) => {
+    await setRecipes(recipes)
+    await setActiveRecipes(true)
     console.log(recipes)
   }
-  useEffect(() => {
-    setActiveRecipes(true)
-  }, [recipes]);
+
   return (
     <div className="ingredients">
       <h1>Ingredients</h1>

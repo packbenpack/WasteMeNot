@@ -5,14 +5,14 @@ const RecipesList = ({activeRecipes}) => {
 
   return (
     <div className="recipeBox">
-      {activeRecipes.map((recipe) => {
-        <IndividualRecipe
-          key={recipe.id}
-          missingIngredients={recipe.missedIngredients}
-          title={recipe.title}
+      <p>hi</p>
+      <div>
+      {activeRecipes.map((recipe) =>
+        <IndividualRecipe key = {recipe.id}
+                          title={recipe.title}
         />
-        // this will post to the user's DB
-      })}
+      )}
+      </div>
     </div>
   )
 }

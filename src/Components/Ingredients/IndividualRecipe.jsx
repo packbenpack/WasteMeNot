@@ -4,11 +4,7 @@ const IndividualRecipe = ({title, missingIngredients}) => {
 
   return (
     <div className="recipeFlat">
-      <h3>{title}</h3>
-      <p>Missing Ingredients:</p>
-      {missingIngredients.map((ingredients) => {
-        <p>{ingredients}</p>
-      })}
+      <li>{title}</li>
     </div>
   )
 }
