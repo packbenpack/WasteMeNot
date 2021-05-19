@@ -10,6 +10,7 @@ const RecipesList = ({activeRecipes}) => {
       {activeRecipes.map((recipe) =>
         <IndividualRecipe key = {recipe.id}
                           title={recipe.title}
+                          unused={recipe.missedIngredients}
         />
       )}
       </div>
