@@ -8,8 +8,14 @@ const schema = mongoose.Schema({
     sourceUrl: String,
     summary: String,
     instructions: String,
-    cooked: {Type : Boolean, default : false},
-    favorite: {Type : Boolean, default : false}
+    cooked: {
+        type : Boolean,
+        default : false
+    },
+    favorite: {
+        type : Boolean,
+        default : false
+    }
 });
 
 module.exports = mongoose.model("Recipe", schema);

@@ -5,10 +5,9 @@ const IndividualRecipe = ({title, missingIngredients, unused, id}) => {
   const [saveRecipes, setSaveRecipes] = useState('')
 
   const getRecipe = async (recipeId) => {
-    axios.get(`https://api.spoonacular.com/recipes/${recipeId}/information?&apiKey=0951c3300ae944fc82b5e5c6ca06133c`)
-  .then((res) => {
-    useState(res.data);
-  });
+    const res = await axios.get(`https://api.spoonacular.com/recipes/${recipeId}/information?&apiKey=0951c3300ae944fc82b5e5c6ca06133c`)
+    setSaveRecipes(res.data);
+    console.log(saveRecipes);
   }
 
   return (
