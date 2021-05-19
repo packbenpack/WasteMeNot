@@ -6,7 +6,7 @@ import recipeMeta from '../../recipeMeta.json'
 
 const Ingredients = ({ingreds, onChangeMeta}) => {
   const [recipes, setRecipes] = useState([])
-  const [activeRecipes, setActiveRecipes] = useState(true)
+  const [activeRecipes, setActiveRecipes] = useState(false)
 
   const generateRecipes = async (recipes) => {
     await setRecipes(recipes)

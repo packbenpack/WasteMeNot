@@ -7,8 +7,11 @@ const IndividualRecipe = ({title, missingIngredients, unused}) => {
       <h3>{title}</h3>
       <p>Missing Ingredients:</p>
       {unused.map((ingredients) =>
-        <li className="missingIngredients">{ingredients.name}</li>
+        <li className="missingIngredients" key="ingredients.id">
+          {ingredients.name}
+        </li>
       )}
+      <button type='Submit'> Save Recipe </button>
     </div>
   )
 }

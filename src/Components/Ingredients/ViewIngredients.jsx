@@ -4,33 +4,14 @@ const ViewIngredients = () => {
 
   return (
     <div className="ingredientList">
-      <p> Tomatoes </p>
-      <p> Pickles </p>
-      <p> Pears </p>
-      <p> Tomatoes </p>
-      <p> Pickles </p>
-      <p> Pears </p>
-      <p> Tomatoes </p>
-      <p> Pickles </p>
-      <p> Pears </p>
-      <p> Tomatoes </p>
-      <p> Pickles </p>
-      <p> Pears </p>
-      <p> Tomatoes </p>
-      <p> Pickles </p>
-      <p> Pears </p>
-      <p> Tomatoes </p>
-      <p> Pickles </p>
-      <p> Pears </p>
-      <p> Tomatoes </p>
-      <p> Pickles </p>
-      <p> Pears </p>
-      <p> Tomatoes </p>
-      <p> Pickles </p>
-      <p> Pears </p>
-      <p> Tomatoes </p>
-      <p> Pickles </p>
-      <p> Pears </p>
+      <p>tomato</p>
+      <p>pickles</p>
+      <p>carrots</p>
+      <p>bleu cheese</p>
+      <p>salami</p>
+      <p>mustard</p>
+      <p>rye</p>
+      <p>bread</p>
     </div>
   )
 }

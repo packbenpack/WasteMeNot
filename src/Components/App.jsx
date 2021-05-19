@@ -9,7 +9,7 @@ console.log(window.React1 === window.React2);
 const App = () => {
 
   const [ingredientsPage, setIngredientsPage] = useState(true);
-  const [ingredients, setIngredients] = useState(['eggs', 'sausage', 'cheese', 'potato', 'onion'])
+  const [ingredients, setIngredients] = useState(['tomato', 'pickles', 'carrots', 'bleu cheese', 'salami', 'mustard', 'rye bread'])
   const handleSwap = () => {
     if (ingredientsPage) {
       setIngredientsPage(false)
