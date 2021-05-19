@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
 
 const schema = mongoose.Schema({
-    ingredients : [
-      {ingredientName: String}
-    ],
+    ingredients : [],
     title: String,
     readyInMinutes: Number,
     servings: Number,
