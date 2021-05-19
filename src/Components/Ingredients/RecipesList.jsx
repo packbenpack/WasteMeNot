@@ -5,7 +5,6 @@ const RecipesList = ({activeRecipes}) => {
 
   return (
     <div className="recipeBox">
-      <p>hi</p>
       <div>
       {activeRecipes.map((recipe) =>
         <IndividualRecipe key = {recipe.id}
