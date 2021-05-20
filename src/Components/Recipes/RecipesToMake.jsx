@@ -3,17 +3,14 @@ import React, {useState} from 'react'
 const RecipesToMake = ({recipes}) => {
   return (
     <div>
-      <p>pasgetti</p>
+       <h1>Uncooked Recipes</h1>
+       <div>
+        {recipes.map((recipe) => (
+          <p>{recipe.title}</p>
+        ))}
+       </div>
     </div>
   )
 }
-
-// const onLinkClick = (tit) => {
-//   console.log(tit)
-// }
-
-// <a className="sourceUrl" href={source} target="_blank" rel="noopener noreferrer" onClick={() => onLinkClick(source)}>
-// View full recipe
-// </a>
 
 export default RecipesToMake;

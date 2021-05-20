@@ -1,9 +1,19 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
+import Modal from '../Modal.jsx'
+import Cooked from './Cooked.jsx'
 
-const RecipesMade = () => {
+const RecipesMade = ({recipesDone}) => {
+
+
   return (
     <div>
-       <h1>Recipes You Made</h1>
+       <h1>Cooked Recipes</h1>
+       <div>
+        {recipesDone.map((recipe) => (
+
+          <Cooked recipeInfo={recipe}/>
+        ))}
+       </div>
     </div>
   )
 }
