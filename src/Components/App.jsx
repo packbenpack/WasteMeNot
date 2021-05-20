@@ -27,8 +27,8 @@ const App = () => {
       <hr />
         <div className="swapPage">
         {ingredientsPage
-        ? <button type="submit" onClick={()=> handleSwap()}> View recipes </button>
-        : <button type="submit" onClick={()=> handleSwap()}> View ingredients </button>
+        ? <button className="swapBtn" type="submit" onClick={()=> handleSwap()}> View recipes </button>
+        : <button className="swapBtn" type="submit" onClick={()=> handleSwap()}> View ingredients </button>
         }
         </div>
       </div>

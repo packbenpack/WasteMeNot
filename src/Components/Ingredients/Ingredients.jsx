@@ -48,11 +48,11 @@ const Ingredients = () => {
         ingredient={ingredient}/>
       ))
     }
+      <button type="submit" className="getRecipesBtn" onClick={()=>generateRecipes(ingredientList)}> Get Recipes </button>
       {recipes
         ? <RecipesList activeRecipes={recipes} />
         : null
       }
-      <button type="submit" onClick={()=>generateRecipes(ingredientList)}> Get Recipes </button>
     </div>
   )
 }

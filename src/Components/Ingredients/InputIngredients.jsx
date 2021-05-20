@@ -7,9 +7,13 @@ const InputIngredients = () => {
     setIngredients(e.target.value)
   }
 
+  cancelCourse = () => {
+    document.getElementById("ingredient-form").reset();
+  }
+
   return (
     <div>
-      <form>
+      <form id="ingredient-form">
         <label>What's going bad?</label>
         <input
           type="text"

@@ -51,4 +51,16 @@ router.post("/addIngredient", async(req, res) => {
   res.send(post)
 })
 
+router.put("/:id", async(req, res) => {
+  try {
+    const recipe = await Recipe.findOne({ _id: req.params.id })
+    recipe.cooked = true
+    await recipe.save()
+    res.send(recipe)
+  } catch {
+    res.status(404)
+    res.send({ error: "Post doesn't exist!"})
+  }
+})
+
 module.exports = router

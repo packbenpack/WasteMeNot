@@ -11,6 +11,7 @@ const RecipesList = ({activeRecipes}) => {
                           id = {recipe.id}
                           title={recipe.title}
                           unused={recipe.missedIngredients}
+                          used={recipe.usedIngredients}
         />
       )}
       </div>

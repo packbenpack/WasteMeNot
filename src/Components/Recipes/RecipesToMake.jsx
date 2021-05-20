@@ -1,14 +1,13 @@
 import React, {useState} from 'react'
+import Uncooked from './Uncooked.jsx'
 
 const RecipesToMake = ({recipes}) => {
   return (
     <div>
-       <h1>Uncooked Recipes</h1>
-       <div>
-        {recipes.map((recipe) => (
-          <p>{recipe.title}</p>
-        ))}
-       </div>
+       <h3>Uncooked Recipes</h3>
+       {recipes.map((recipe) => (
+        <Uncooked recipeInfo={recipe}/>
+      ))}
     </div>
   )
 }

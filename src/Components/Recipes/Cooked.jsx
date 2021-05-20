@@ -11,33 +11,47 @@ const Cooked = ({recipeInfo}) => {
       <p className="recipeName">{recipeInfo.title}</p>
       <button className="recipeBtn" type='button' onClick={openModal}>View Recipe</button>
       <Modal ref={modal} fade>
-        <label>
-          Title:
+        <label className="recipeHeader">
+          Recipe:
+          <p>
           {recipeInfo.title}
+          </p>
         </label>
-        <label>
+        <label className="recipeHeader">
           Ingredients:
-          {recipeInfo.ingredients}
+          <p className="recipeText">
+            {recipeInfo.ingredients}
+          </p>
         </label>
-        <label>
+        <label className="recipeHeader">
           Source:
-          {recipeInfo.sourceUrl}
+          <p className="recipeText">
+            {recipeInfo.sourceUrl}
+          </p>
         </label>
-        <label>
+        <label className="recipeHeader">
           Time to cook:
-          {recipeInfo.readyInMinutes}
+          <p className="recipeText">
+            {recipeInfo.readyInMinutes}
+          </p>
         </label>
-        <label>
+        <label className="recipeHeader">
           Servings:
-          {recipeInfo.servings}
+          <p className="recipeText">
+            {recipeInfo.servings}
+          </p>
         </label>
-        <label>
+        <label className="recipeHeader">
           Summary:
-          {recipeInfo.summary}
+          <p className="recipeText">
+            {recipeInfo.summary}
+          </p>
         </label>
-        <label>
+        <label className="recipeHeader">
           Instructions:
-          {recipeInfo.instructions}
+          <p className="recipeText">
+            {recipeInfo.instructions}
+          </p>
         </label>
       </Modal>
     </div>

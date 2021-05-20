@@ -28,7 +28,7 @@ const Recipes = () => {
 
   return (
     <div>
-       <h1>Recipes</h1>
+       <h1 className="recipeHeader">Recipes</h1>
        { savedRecipesUnmade
        ? <RecipesToMake recipes={savedRecipesUnmade}/>
        : null
