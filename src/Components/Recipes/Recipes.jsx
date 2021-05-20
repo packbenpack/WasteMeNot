@@ -4,7 +4,7 @@ import RecipesMade from './RecipesMade.jsx'
 import axios from 'axios'
 
 const Recipes = () => {
-  const [savedRecipes, setSavedRecipes] = useState([]);
+  const [savedRecipesUnmade, setSavedRecipesunMade] = useState([]);
   const [recipeNames, setRecipeNames] = useState([]);
 
   useEffect(async () => {

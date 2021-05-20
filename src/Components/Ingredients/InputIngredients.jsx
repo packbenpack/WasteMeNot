@@ -1,16 +1,10 @@
 import React, {useState, useEffect} from 'react'
 
-const InputIngredients = ({ingreds, onChangeMeta}) => {
+const InputIngredients = () => {
   const [invalidEntry, setInvalidEntry] = useState(false)
-  const addToIngredients = (target) => {
-    if (target.length < 1 || typeof(target !== "string")) {
-      console.log('nope')
-      setInvalidEntry(true)
-      return
-    }
-    onChangeMeta(target)
-    setInvalidEntry(false)
-    console.log(ingreds)
+
+  const handleChange = (e) => {
+    setIngredients(e.target.value)
   }
 
   return (
@@ -21,7 +15,7 @@ const InputIngredients = ({ingreds, onChangeMeta}) => {
           type="text"
           name="ingredients"
           className="ingredientEntry"
-          onChange={(e) => addToIngredients(e.target.value)}
+          onChange={(e) => setIngredient(e.target.value)}
           >
         </input>
       </form>
