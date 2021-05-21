@@ -27,7 +27,7 @@ const Recipes = () => {
   }, []);
 
   return (
-    <div>
+    <div className="recipeContainer">
        <h1 className="recipeHeader">Recipes</h1>
        { savedRecipesUnmade
        ? <RecipesToMake recipes={savedRecipesUnmade}/>

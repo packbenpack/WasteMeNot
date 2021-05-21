@@ -32,7 +32,7 @@ const Cooked = ({recipeInfo}) => {
         <label className="recipeHeader">
           Time to cook:
           <p className="recipeText">
-            {recipeInfo.readyInMinutes}
+            {recipeInfo.readyInMinutes} minutes
           </p>
         </label>
         <label className="recipeHeader">

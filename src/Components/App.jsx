@@ -18,6 +18,12 @@ const App = () => {
   return (
 <div>
   <h1 className = "logo"> WasteMeNot </h1>
+  <div className="swapPage">
+        {ingredientsPage
+        ? <button className="swapBtn" type="submit" onClick={()=> handleSwap()}> View recipes </button>
+        : <button className="swapBtn" type="submit" onClick={()=> handleSwap()}> View ingredients </button>
+        }
+        </div>
     <div className="wrapper">
       <hr />
         {ingredientsPage
@@ -25,12 +31,7 @@ const App = () => {
           : <Recipes />
         }
       <hr />
-        <div className="swapPage">
-        {ingredientsPage
-        ? <button className="swapBtn" type="submit" onClick={()=> handleSwap()}> View recipes </button>
-        : <button className="swapBtn" type="submit" onClick={()=> handleSwap()}> View ingredients </button>
-        }
-        </div>
+
       </div>
     </div>
   )

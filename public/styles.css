@@ -7,7 +7,7 @@
 
 .wrapper {
   display: flex;
-  justify-content: space-between
+  margin-right: 50%
 }
 
 .logo {
@@ -27,7 +27,7 @@
 }
 
 .swapBtn{
-  margin-right: 8px
+  margin-left: 80%
 }
 
 .recipeName {
@@ -56,18 +56,31 @@
 .ingredientList {
   background-color: lightgray;
   max-height: 30vh;
-  width: 100%;
+  width: 150%;
   overflow-y: scroll;
   float: left;
   border: 1px, solid, black;
 }
 
+.recipeContainer {
+  margin-left: 40px
+}
+
 .recipeBox {
+  width: 150%;
   justify-content: right;
   background-color: lightgray;
   max-height: 80vh;
   overflow-y: scroll;
   border: 1px, solid, black;
+}
+
+.savedRecipe {
+  margin-top: 4px
+}
+
+.recipeType {
+  border-bottom:1px solid black;
 }
 
 .recipeHeader {

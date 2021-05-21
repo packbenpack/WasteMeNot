@@ -7,7 +7,7 @@ const RecipesMade = ({recipesDone}) => {
 
   return (
     <div>
-       <h3>Cooked Recipes</h3>
+       <h3 className="recipeType">Cooked Recipes</h3>
        <div>
         {recipesDone.map((recipe) => (
 
