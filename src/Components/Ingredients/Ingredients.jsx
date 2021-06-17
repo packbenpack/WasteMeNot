@@ -9,6 +9,7 @@ const Ingredients = () => {
   const [activeRecipes, setActiveRecipes] = useState(false)
   const [ingredientList, setIngredientList] = useState([])
   const [ingredient, setIngredient] = useState('')
+  const [ingredientsStored, setIngredientsStored] = useState(false)
 
   const generateRecipes = async (ingredients) => {
     const res = await axios.get(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredientList}&number=20&apiKey=0951c3300ae944fc82b5e5c6ca06133c`)
@@ -16,11 +17,15 @@ const Ingredients = () => {
     console.log(res.data, 'recipe data')
   }
 
+  useEffect(() => {
+    setIngredientsStored(true)
+  }, [ingredientList])
+
   return (
     <div className="ingredients">
-      <h1>Ingredients</h1>
+      <h1 className="ingredientsHeader">Ingredients</h1>
       <div>
-      <form>
+      <form className="enterIngredients">
         <label>What's going bad?</label>
         <input
           type="text"
@@ -32,6 +37,7 @@ const Ingredients = () => {
       </form>
       <button
         type="submit"
+        className = "submitIngredients"
         onClick={(e)=> {
           setIngredientList([
           ...ingredientList,
@@ -48,8 +54,16 @@ const Ingredients = () => {
         ingredient={ingredient}/>
       ))
     }
-      <button type="submit" className="getRecipesBtn" onClick={()=>generateRecipes(ingredientList)}> Get Recipes </button>
-      {recipes
+    {ingredientsStored
+      ? <button
+      type="submit"
+      className="getRecipesBtn"
+      onClick={()=>generateRecipes(ingredientList)}>
+      Get Recipes
+      </button>
+      : null
+    }
+          {recipes
         ? <RecipesList activeRecipes={recipes} />
         : null
       }

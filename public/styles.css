@@ -37,6 +37,12 @@
 
 .recipeBtn {
   margin-top: -14px;
+  margin-Bottom: 6px;
+  margin-right: 8px;
+}
+
+.favoriteBtn {
+  margin-top: -14px;
   margin-Bottom: 6px
 }
 
@@ -44,19 +50,34 @@
   font-weight: 800;
 }
 
+.ingredientsHeader {
+  font-weight: 800;
+  margin-left: 8%
+}
+
 .getRecipesBtn {
   margin-top: 5px;
   margin-bottom: 3px;
+  margin-left: 8%;
 }
 
 .ingredients {
   margin-left: 10px;
 }
 
+.enterIngredients {
+  margin-left: 8%;
+}
+
+.submitIngredients {
+  margin-left: 8%;
+}
+
 .ingredientList {
   background-color: lightgray;
   max-height: 30vh;
-  width: 150%;
+  width: 180%;
+  margin-left: 8%;
   overflow-y: scroll;
   float: left;
   border: 1px, solid, black;
@@ -67,7 +88,8 @@
 }
 
 .recipeBox {
-  width: 150%;
+  width: 180%;
+  margin-left: 8%;
   justify-content: right;
   background-color: lightgray;
   max-height: 80vh;
@@ -77,6 +99,12 @@
 
 .savedRecipe {
   margin-top: 4px
+}
+
+.recipeFlat {
+  margin-left: 11px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .recipeType {

@@ -7,22 +7,6 @@ router.get("/", async function(req, res){
 	res.send(recipes)
 })
 
-// router.post("/add", async (req, res) => {
-// 	const recipe = new Recipe({
-//     ingredients : req.body.ingredients,
-//     title: req.body.title,
-//     readyInMinutes: req.body.readyInMinutes,
-//     servings: req.body.servings,
-//     sourceUrl: req.body.sourceUrl,
-//     summary: req.body.summary,
-//     instructions: req.body.instructions,
-//     cooked: req.body.cooked,
-//     favorite: req.body.favorite
-// 	})
-// 	await post.save()
-// 	res.send(post)
-// })
-
 router.post('/addRecipe', async(req, res) => {
   try {
 	const recipe = new Recipe({
@@ -55,6 +39,30 @@ router.put("/:id", async(req, res) => {
   try {
     const recipe = await Recipe.findOne({ _id: req.params.id })
     recipe.cooked = true
+    await recipe.save()
+    res.send(recipe)
+  } catch {
+    res.status(404)
+    res.send({ error: "Post doesn't exist!"})
+  }
+})
+
+router.put("/:id/fav", async(req, res) => {
+  try {
+    const recipe = await Recipe.findOne({ _id: req.params.id })
+    recipe.favorite = true
+    await recipe.save()
+    res.send(recipe)
+  } catch {
+    res.status(404)
+    res.send({ error: "Post doesn't exist!"})
+  }
+})
+
+router.put("/:id/unfav", async(req, res) => {
+  try {
+    const recipe = await Recipe.findOne({ _id: req.params.id })
+    recipe.favorite = false
     await recipe.save()
     res.send(recipe)
   } catch {

@@ -10,7 +10,6 @@ const Uncooked = ({recipeInfo}) => {
   const modal = useRef(null);
   const updateCooked = async (id) => {
     try{
-      console.log(`http://localhost:3000/recipes/${id}`)
       const update = await axios.put(`http://localhost:3000/recipes/${id}`)
       updateRecipeMade(true)
       } catch(err) {
